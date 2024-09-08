@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome Page</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    .fade-in {
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    .slide-up {
+      animation: slideUp 2s ease-in-out;
+    }
+
+    @keyframes slideUp {
+      from {
+        transform: translateY(100%);
+      }
+      to {
+        transform: translateY(0);
+      }
+    }
+
+    .bg-animated {
+      background: linear-gradient(270deg, #ff7e5f, #feb47b, #86a8e7, #91eae4);
+      background-size: 800% 800%;
+      animation: bgAnimation 10s ease infinite;
+    }
+
+    @keyframes bgAnimation {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+  </style>
+</head>
+<body class="bg-animated flex items-center justify-center h-screen">
+  <div class="bg-white p-10 rounded-lg shadow-2xl text-center fade-in">
+    <h1 class="text-3xl font-bold mb-4 slide-up">Selamat Datang!</h1>
+    <p class="text-lg mb-8 slide-up">Kami senang Anda kembali.</p>
+    <button onclick="location.href='halaman-berikutnya.html'" class="bg-blue-500 text-white px-6 py-3 rounded-full hover:bg-blue-700 transition duration-300 ease-in-out slide-up">
+      Lanjut ke Halaman Selanjutnya
+    </button>
+  </div>
+</body>
+</html>
